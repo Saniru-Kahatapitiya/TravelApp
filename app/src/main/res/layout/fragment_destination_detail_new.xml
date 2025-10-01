@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Header Image with Back Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ninearch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/circle_background"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back"
+            app:tint="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Content Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Destination Name -->
+            <TextView
+                android:id="@+id/tv_destination_name"
+                android:text="Ella"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Location and Rating -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    app:tint="@color/teal_700" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:text="Sri Lanka"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_rating_number"
+                    android:text="4.8"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:src="@android:drawable/btn_star_big_on"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="#FFD700" />
+
+                    <ImageView
+                        android:src="@android:drawable/btn_star_big_on"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="#FFD700" />
+
+                    <ImageView
+                        android:src="@android:drawable/btn_star_big_on"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="#FFD700" />
+
+                    <ImageView
+                        android:src="@android:drawable/btn_star_big_on"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="#FFD700" />
+
+                    <ImageView
+                        android:src="@android:drawable/btn_star_big_off"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        app:tint="#FFD700" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Tab Navigation -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tab_about"
+                    android:text="About"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/teal_700"
+                    android:background="@drawable/tab_underline"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tab_review"
+                    android:text="Review"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="24dp" />
+
+                <TextView
+                    android:id="@+id/tab_photo"
+                    android:text="Photo"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="24dp" />
+
+            </LinearLayout>
+
+            <!-- Content Area -->
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <!-- About Tab Content -->
+                <LinearLayout
+                    android:id="@+id/about_content"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:text="Description"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:text="Ella is a charming hill-country town surrounded by lush tea plantations, waterfalls, and mountain views. Known for attractions like the Nine Arches Bridge, Little Adam's Peak, and the scenic Ella Rock hike, it's a favorite spot for nature lovers and adventure seekers."
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- Review Tab Content -->
+                <LinearLayout
+                    android:id="@+id/review_content"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <!-- Review 1 -->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:src="@drawable/profile_placeholder"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_shape"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp">
+
+                            <TextView
+                                android:text="Saniru Mandira"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_off"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    app:tint="#FFD700" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Review 2 -->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_shape"
+                            android:scaleType="centerCrop"
+                            app:tint="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp">
+
+                            <TextView
+                                android:text="Fernando"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginEnd="2dp"
+                                    app:tint="#FFD700" />
+
+                                <ImageView
+                                    android:src="@android:drawable/btn_star_big_off"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    app:tint="#FFD700" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Photo Tab Content -->
+                <LinearLayout
+                    android:id="@+id/photo_content"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:text="Photo Gallery"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Photo Grid -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <ImageView
+                            android:src="@drawable/ninearch_1"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="4dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rounded_corner" />
+
+                        <ImageView
+                            android:src="@drawable/ninearch_2"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="4dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rounded_corner" />
+
+                        <ImageView
+                            android:src="@drawable/ninearch_3"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="4dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rounded_corner" />
+
+                        <ImageView
+                            android:src="@drawable/ninearch"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="4dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/rounded_corner" />
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Action Button -->
+            <Button
+                android:id="@+id/btn_add_to_trip"
+                android:text="Add"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

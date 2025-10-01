@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Circle / Globe -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+
+    <!-- Flight path -->
+    <path
+        android:fillColor="#FFC107"
+        android:strokeWidth="0.5"
+        android:strokeColor="#FFC107"
+        android:pathData="M4,16 L10,12 L14,16 L20,10"/>
+
+    <!-- Plane shape -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M14,16l1.5-1.5 2,2-1.5,1.5z"/>
+</vector>

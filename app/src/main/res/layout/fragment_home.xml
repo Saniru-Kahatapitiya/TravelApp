@@ -1,0 +1,318 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+                <!-- Top Banner Image -->
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_margin="16dp"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Search destinations..."
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:queryBackground="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/img_top_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="236dp"
+                    android:contentDescription="Top banner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover" />
+
+                <!-- Add Destination Button -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                        <Button
+                            android:id="@+id/btn_add_destination"
+                            android:text="+ Click here to add a destination"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:textColor="@android:color/black"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:backgroundTint="@color/button"/>
+
+                </LinearLayout>
+
+                <!-- Travel Journals Section -->
+                <TextView
+                    android:text="Travel Journals"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                        <!-- Add Journal Button -->
+                        <Button
+                            android:id="@+id/btn_add_journal"
+                            android:text="+"
+                            android:textSize="28sp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginEnd="12dp"
+                            android:clickable="true"
+                            android:background="@drawable/circle_shape"
+                            android:textColor="@android:color/white" />
+
+                        <!-- Circular preview images -->
+                        <ImageView
+                            android:id="@+id/img_ninearch"
+                            android:src="@drawable/ninearch"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/circle_shape"
+                            android:clipToOutline="true" />
+
+                        <ImageView
+                            android:id="@+id/img_hikkaduwa"
+                            android:src="@drawable/hikkaduwa"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/circle_shape"
+                            android:clipToOutline="true" />
+
+                        <ImageView
+                            android:id="@+id/img_colombo"
+                            android:src="@drawable/colombo"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/circle_shape"
+                            android:clipToOutline="true" />
+
+                </LinearLayout>
+
+                <!-- My Trips Section (New) -->
+
+                <!-- About Us Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="8dp"
+                    android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                                <!-- Text Section -->
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:layout_marginEnd="12dp">
+
+                                        <TextView
+                                            android:text="About Us"
+                                            android:textSize="22sp"
+                                            android:textStyle="bold"
+                                            android:textColor="@android:color/black"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+
+                                        <TextView
+                                            android:text="Welcome To Travel &amp; Tourism, Your Ultimate Companion For Exploring The World. We Connect Travelers With Breathtaking Destinations..."
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/black"
+                                            android:lineSpacingExtra="4dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"/>
+                                </LinearLayout>
+
+                                <!-- Image Section -->
+                                <ImageView
+                                    android:id="@+id/about_us_image"
+                                    android:layout_width="50dp"
+                                    android:layout_height="186dp"
+                                    android:layout_weight="1"
+                                    android:clipToOutline="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/about_us" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Our Services Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="8dp"
+                    android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                                <!-- Image Section -->
+                                <ImageView
+                                    android:id="@+id/our_services_image"
+                                    android:layout_width="50dp"
+                                    android:layout_height="150dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="12dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/our_services"
+                                    android:clipToOutline="true"/>
+
+                                <!-- Text Section -->
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2">
+
+                                        <TextView
+                                            android:text="Our Services"
+                                            android:textSize="22sp"
+                                            android:textStyle="bold"
+                                            android:textColor="@android:color/black"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+
+                                        <TextView
+                                            android:text="At Travel &amp; Tourism, We Offer A Complete Set Of Tools To Make Your Journeys Smoother, Smarter..."
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/black"
+                                            android:lineSpacingExtra="4dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Statistics Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginBottom="24dp">
+
+                <!-- Explorers -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                        <TextView
+                            android:text="10M+"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Explorers"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Planners -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                        <TextView
+                            android:text="70+"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Planners"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Storytellers -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                        <TextView
+                            android:text="90+"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Storytellers"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+        </LinearLayout>
+
+        <!-- Explore Destinations Section -->
+        <TextView
+            android:text="Recommended Tours"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Destination cards -->
+        <include layout="@layout/item_destination"/>
+        <include layout="@layout/item_destination2"/>
+        <include layout="@layout/item_destination3"/>
+</LinearLayout>
+</ScrollView>
